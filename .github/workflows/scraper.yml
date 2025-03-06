@@ -2,9 +2,9 @@ name: First Scraper
 
 on:
   workflow_dispatch:
-    input:
+    inputs:
       states:
-        description: "US stat to scrape"
+        description: "US state to scrape"
         required: true
         default: ia
   schedule:
