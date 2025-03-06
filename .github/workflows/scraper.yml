@@ -18,6 +18,9 @@ jobs:
     name: Scrape
     runs-on: ubuntu-latest
     steps:
+      - name: Hello world
+        run: echo "Scraping data for ${{ inputs.state }}"
+    
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -32,6 +35,9 @@ jobs:
 
       - name: Scrape
         run: warn-scraper ${{ inputs.state }} --data-dir ./data/
+
+      - name: Save datestamp
+        run: date > ./data/latest-scrape.txt
 
       - name: Commit and push
         run: |
