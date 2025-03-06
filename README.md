@@ -1,2 +1,2 @@
 # gobigwithgithubactions_nicar
-Working with Guthub Actions
+Working with Github Actions
